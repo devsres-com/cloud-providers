@@ -98,7 +98,7 @@ Try this: 'az group create -l westus -n MyResourceGroup'
 BadRequestError: (AccountNameInvalid) por-favor-so-queria-um-bucket is not a valid storage account name. Storage account name must be between 3 and 24 characters in length and use numbers and lower-case letters only.
 
 # # NA AWS O LIMITE É 63 CARACTERES E DEIXA HIFENS!!!!!!
- az storage account create -n prfvrmeubucket -g so-queria-criar-um-bucket
+# az storage account create -n prfvrmeubucket -g so-queria-criar-um-bucket
  ... 2 min depois ...
  {- Finished ..
   "accessTier": "Hot",
