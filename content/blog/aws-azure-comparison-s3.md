@@ -6,8 +6,8 @@ date = "2020-12-04"
 tags = ["storage","associate","az900"]
 categories = ["computing","associate", "az900"]
 [[images]]
-  src = "img/main/ec2.png"
-  alt = "EC2 symbol"
+  src = "img/main/blobvss3.png"
+  alt = "Azure Blob vs S3"
   stretch = ""
 +++
 
@@ -19,16 +19,36 @@ No fim do dia, uma máquina virtual é uma máquina virtual. Se você chama o di
 
 Abaixo seguem alguns tópicos relevantes de mapeamento de um para o outro.
 
-|A|Azure Virtual Machines|AWS EC2|Observações|
+||Azure Blob|AWS S3|Observações|
 |-------|---------|---------|-------|
-||Arquivos são **Blobs** armazenados em **Containers** que pertencem a uma **Storage Account**|Arquivos são **objetos** armazenados em **Buckets** de maneira 'flat', sem hierarquia. As 'pastas' são de mentira.||
+|Arquivos|Blob|Objeto||
+|Pastas|-|-|As 'pastas' não existem, são um recurso visual derivando as '/' dos nomes|
+|Raiz do armazenamento|Container|Bucket|O nome do Bucket na AWS é global; usuários não podem repetir nomes de buckets que já existem;|
+|Hierarquia adicional|Storage Account|-|O nome da Storage Account é global; usuários não podem repetir nomes de Storage Accounts que já existem;|
+|Hierarquia adicional|Resource Group|-|Nada existe na Azure sem pertencer a um Resource Group.|
+
+Logo, para a Azure, arquivos são **Blobs** armazenados em **Containers** que pertencem a uma **Storage Account** de um **Resource Group**. Já para a AWS, arquivos são **objetos** armazenados em **Buckets** do serviço S3. 
+
+A [própria Microsoft](https://docs.microsoft.com/en-us/azure/architecture/aws-professional/storage) postou uma comparação sobre as diferenças, mas pouco relevante em explorar a terminologia.
+
+||Azure Blob|AWS S3|Observações|
+|-------|---------|---------|-------|
+|Tamanho máximo de arquivos|Variável de acordo com o tipo. Padrão é 190TB |5 TB|[Diferentes tipos de blobs na Azure](https://docs.microsoft.com/en-us/rest/api/storageservices/understanding-block-blobs--append-blobs--and-page-blobs)|
+|Classes|Hot, Cool, Archive|Standard,Infrequent Access, os mesmos mas com Redundância reduzida (One Zone), Reduced Redundancy, Glacier, Glacier Deep Archive|
+|Classes|Local (LRS), Zone (ZRS|S3 One Zone, Standard|
+|Classes|Geo (GRS), Geozone (GZRS)|S3IA/S3 com Cross Region Replication |GZRS faz replicação entre zonas de uma mesma Region|
+|Classes|Cool Blob Storage|Infrequent Access|
+|Classes|Storage Archive Blob Storage|Glacier|
+|Integração com CDN|Container $web de uma Storage Account com o recurso habilitado|Bucket com configuração especializada.|
+
+
 
 ## Bônus: linha de comando
 
 Tudo bem que a *aws cli* é muito pouco intuitiva para a trabalhar com buckets, mas ainda assim, é bem simples.
 
 ```
-# mb de 'make bucket' :O
+# # mb de 'make bucket' :O
 # aws s3 mb s3://dev-sres-first-bucket
 make_bucket: dev-sres-first-bucket
 

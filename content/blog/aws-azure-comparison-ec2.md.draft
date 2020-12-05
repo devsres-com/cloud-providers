@@ -6,8 +6,8 @@ date = "2020-12-04"
 tags = ["computing","associate","az900"]
 categories = ["computing","associate", "az900"]
 [[images]]
-  src = "img/main/ec2.png"
-  alt = "EC2 symbol"
+  src = "img/main/blobvss3.png"
+  alt = "Azure blob vs AWS s3"
   stretch = ""
 +++
 

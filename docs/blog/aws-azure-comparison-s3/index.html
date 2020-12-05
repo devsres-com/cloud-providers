@@ -10,7 +10,7 @@
 <meta itemprop="description" content="&#39;Tradução&#39; dos nomes entre os cloud providers">
 <meta itemprop="datePublished" content="2020-12-04T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2020-12-04T00:00:00+00:00" />
-<meta itemprop="wordCount" content="927">
+<meta itemprop="wordCount" content="1130">
 <meta itemprop="image" content="">
 
 
@@ -251,7 +251,7 @@
   <div class="meta">
     <time datetime="2020-12-04 00:00:00 &#43;0000 UTC">4 de December, 2020</time>
     <p>Marcelo Andrade</p>
-    <p>5 Minutos De Leitura</p>
+    <p>6 Minutos De Leitura</p>
   </div>
 </header>
 
@@ -301,8 +301,8 @@
 
     </div>
     <div class="content">
-      <a href="/marcelo/blog/aws-azure-comparison-s3/" class="image" style="--bg-image: url('https://devsres.com/marcelo/img/main/ec2.png');">
-    <img src="https://devsres.com/marcelo/img/main/ec2.png" alt="EC2 symbol">
+      <a href="/marcelo/blog/aws-azure-comparison-s3/" class="image" style="--bg-image: url('https://devsres.com/marcelo/img/main/blobvss3.png');">
+    <img src="https://devsres.com/marcelo/img/main/blobvss3.png" alt="Azure Blob vs S3">
   </a>
       <p>Se você conhece bastante de um Cloud Provider, acredito que o primeiro passo para estudar um segundo seria entender o básico da equivalência entre eles, meio que um &ldquo;dicionário&rdquo; para traduzir entre dois conjuntos distintos de vocabulários.</p>
 <p>Sempre existirão diferenças conceituais estruturantes, em especial nos Cloud Providers que vieram depois e puderam arranjar, de maneira mais elegante, a apresentação dos seus serviços.</p>
@@ -311,24 +311,104 @@
 <table>
 <thead>
 <tr>
-<th>A</th>
-<th>Azure Virtual Machines</th>
-<th>AWS EC2</th>
+<th></th>
+<th>Azure Blob</th>
+<th>AWS S3</th>
 <th>Observações</th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td>Arquivos</td>
+<td>Blob</td>
+<td>Objeto</td>
 <td></td>
-<td>Arquivos são <strong>Blobs</strong> armazenados em <strong>Containers</strong> que pertencem a uma <strong>Storage Account</strong></td>
-<td>Arquivos são <strong>objetos</strong> armazenados em <strong>Buckets</strong> de maneira &lsquo;flat&rsquo;, sem hierarquia. As &lsquo;pastas&rsquo; são de mentira.</td>
+</tr>
+<tr>
+<td>Pastas</td>
+<td>-</td>
+<td>-</td>
+<td>As &lsquo;pastas&rsquo; não existem, são um recurso visual derivando as &lsquo;/&rsquo; dos nomes</td>
+</tr>
+<tr>
+<td>Raiz do armazenamento</td>
+<td>Container</td>
+<td>Bucket</td>
+<td>O nome do Bucket na AWS é global; usuários não podem repetir nomes de buckets que já existem;</td>
+</tr>
+<tr>
+<td>Hierarquia adicional</td>
+<td>Storage Account</td>
+<td>-</td>
+<td>O nome da Storage Account é global; usuários não podem repetir nomes de Storage Accounts que já existem;</td>
+</tr>
+<tr>
+<td>Hierarquia adicional</td>
+<td>Resource Group</td>
+<td>-</td>
+<td>Nada existe na Azure sem pertencer a um Resource Group.</td>
+</tr>
+</tbody>
+</table>
+<p>Logo, para a Azure, arquivos são <strong>Blobs</strong> armazenados em <strong>Containers</strong> que pertencem a uma <strong>Storage Account</strong> de um <strong>Resource Group</strong>. Já para a AWS, arquivos são <strong>objetos</strong> armazenados em <strong>Buckets</strong> do serviço S3.</p>
+<p>A <a href="https://docs.microsoft.com/en-us/azure/architecture/aws-professional/storage">própria Microsoft</a> postou uma comparação sobre as diferenças, mas pouco relevante em explorar a terminologia.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Azure Blob</th>
+<th>AWS S3</th>
+<th>Observações</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tamanho máximo de arquivos</td>
+<td>Variável de acordo com o tipo. Padrão é 190TB</td>
+<td>5 TB</td>
+<td><a href="https://docs.microsoft.com/en-us/rest/api/storageservices/understanding-block-blobs--append-blobs--and-page-blobs">Diferentes tipos de blobs na Azure</a></td>
+</tr>
+<tr>
+<td>Classes</td>
+<td>Hot, Cool, Archive</td>
+<td>Standard,Infrequent Access, os mesmos mas com Redundância reduzida (One Zone), Reduced Redundancy, Glacier, Glacier Deep Archive</td>
+<td></td>
+</tr>
+<tr>
+<td>Classes</td>
+<td>Local (LRS), Zone (ZRS</td>
+<td>S3 One Zone, Standard</td>
+<td></td>
+</tr>
+<tr>
+<td>Classes</td>
+<td>Geo (GRS), Geozone (GZRS)</td>
+<td>S3IA/S3 com Cross Region Replication</td>
+<td>GZRS faz replicação entre zonas de uma mesma Region</td>
+</tr>
+<tr>
+<td>Classes</td>
+<td>Cool Blob Storage</td>
+<td>Infrequent Access</td>
+<td></td>
+</tr>
+<tr>
+<td>Classes</td>
+<td>Storage Archive Blob Storage</td>
+<td>Glacier</td>
+<td></td>
+</tr>
+<tr>
+<td>Integração com CDN</td>
+<td>Container $web de uma Storage Account com o recurso habilitado</td>
+<td>Bucket com configuração especializada.</td>
 <td></td>
 </tr>
 </tbody>
 </table>
 <h2 id="bônus-linha-de-comando">Bônus: linha de comando</h2>
 <p>Tudo bem que a <em>aws cli</em> é muito pouco intuitiva para a trabalhar com buckets, mas ainda assim, é bem simples.</p>
-<pre><code># mb de 'make bucket' :O
+<pre><code># # mb de 'make bucket' :O
 # aws s3 mb s3://dev-sres-first-bucket
 make_bucket: dev-sres-first-bucket
 
@@ -583,8 +663,8 @@ Finished[#############################################################]  100.000
       </header>
       
       <article class="mini-post">
-          <a href="/marcelo/blog/aws-azure-comparison-s3/" class="image" style="--bg-image: url('https://devsres.com/marcelo/img/main/ec2.png');">
-    <img src="https://devsres.com/marcelo/img/main/ec2.png" alt="EC2 symbol">
+          <a href="/marcelo/blog/aws-azure-comparison-s3/" class="image" style="--bg-image: url('https://devsres.com/marcelo/img/main/blobvss3.png');">
+    <img src="https://devsres.com/marcelo/img/main/blobvss3.png" alt="Azure Blob vs S3">
   </a>
         <header>
           <h2><a href="/marcelo/blog/aws-azure-comparison-s3/">AWS e Azure: Armazenamento de objetos</a></h2>
