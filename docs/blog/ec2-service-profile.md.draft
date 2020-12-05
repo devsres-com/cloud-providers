@@ -1,0 +1,52 @@
++++
+title = "Azure - termos de serviços e contratos"
+description = "EC2 - Perfil do serviço"
+author = "Marcelo Andrade"
+date = "2020-11-16"
+tags = ["computing","associate"]
+categories = ["computing","associate"]
+[[images]]
+  src = "img/main/ec2.png"
+  alt = "Calico cat clawing the door"
+  stretch = ""
++++
+
+**Em uma frase**: Amazon Elastic Compute Cloud ou **AWS EC2** é o serviço que oferece a possibilidade de provisionar servidores virtuais Linux ou Windows com alto grau de customização. 
+
+> **Nota pessoal**: Não é difícil entender o serviço EC2 em si. Mas a **quantidade de detalhes** é literalmente **absurda**. Além disso, o domínio é basicamente um pré-requisito para ser considerado um arquiteto de soluções AWS de verdade.
+
+## Vocabulário
+
+* **Instância**: a máquina EC2 criada em si;
+* **Amazon Machine Images ou AMI**: imagens de máquinas virtuais que servem de 'modelo' para as instâncias;
+* **Nitro**: originalmente, a AWS usava o hypervisor Xen para virtualização. O **Nitro** é um hypervisor desenvolvido internamente, baseado em KVM, mas orientado a trabalhar com as **Nitro cards e chips**
+
+## Custos
+
+**Free tier**: As primeiras 750 horas no mês (enquanto valer seu Free Tier de 12 meses) são gratuitas.
+
+**Dimensões de custo**: 
+* **Características da instância**: definição do preço-base da instância depende de uma combinação de três variáveis:
+  * Tipo de instância: propósito geral (t, m), otimizada para computação (c), memória (r,x), armazenamento (d,h,i) ou computação acelerada (f,g,p);
+  * Tamanho da instância: cada tipo apresenta várias combinações de CPU, memória e armazenamento;
+  * Tipo de cobrança: regular, *spot*, reservado ("*reserved*") ou via *Saving Plans* e hosts físicos dedicados;
+* **Transferẽncia de dados**: os dados **recebidos** pela instância EC2 não apresentam custos; já os **enviados** pela instância são cobrados de acordo com o destino
+  * **Internet**: primeiro 1GB gratuito, após isso cobrança decrescente;  
+  * **Interregional**: entre serviços ou instãncias na mesma região ou entre AZs de uma mesma região;
+  * **Entre regiões**;
+* **Disco**: o volume raiz da instância pode ser de dois tipos:
+  * **EBS**: custo adicional de acordo com as especificações deste serviço;
+  * **Instance store**: sem custo adicional (obviamente o custo já está embutido nas instâncias que o suportam);
+  * Volumes adicionais geram cobranças adicionais;
+  * Configurações de otimização de IOPS geram cobranças adicionais;
+* **Endereços IP elásticos** (EIP): são endereços IPv4 públicos. Um IP deste tipo pode ser associado a instâncias automaticamente sem custo; eles podem gerar cobrança se:
+  * a instância receber *elastic ips* adicionais;
+  * a instância estiver associada a um *elastic ip* e não estiver em execução;
+  * transferências que não gerariam cobranças mas que gerem comunicação usando os *elastic ips* também geram cobranças;
+* **Modo ilimtado de CPU**: instâncias do tipo T suportam 'picos' (*bursts*) de consumo de CPU e usam um complicadíssimo sistema de créditos para metrificar seu consumo ideal, chamado de *baseline*; você pode escolher se executará em modo **ilimitado** ou não; ao executar neste modo, caso o consumo médio de CPU supere a *baseline*, custos adicoinais podem ser gerados;
+* **Monitoração detalhada**: ativar esta funcionalidade gera cobranças do serviço **Cloudwatch** que não estão inseridas em seu *Free Tier*;
+* **Host dedicado**: hosts dedicados são fáceis de entender: a cobrança deixa de ser orientada a instâncias EC2 e passa a ser orientada ao **host**, com administração integral do usuário.
+* **Instâncias dedicadas**: este conceito é de uma leitura confusa na documentação oficial, mas a compreensão é bem simples: as instâncias executarão em um servidor dedicado, mas **sem** administração integral do usuário. Isso leva a uma cobrança adicional
+
+
+

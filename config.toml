@@ -2,7 +2,7 @@
 # https://github.com/pacollins/hugo-future-imperfect-slim/wiki/config.toml
 baseurl                 = "https://devsres.com/marcelo/"
 DefaultContentLanguage  = "pt"
-title                   = "/dev/sres/aws"
+title                   = "/dev/sres/cloud-providers"
 theme                   = "hugo-future-imperfect-slim"
 paginate                = 3
 disqusShortname         = "devsres-aws"
@@ -41,7 +41,7 @@ publishDir = "docs"
     iOSColor            = "#ffffff"
 
   [params.header]
-    navbarTitle         = "/dev/sres/aws"
+    navbarTitle         = "/dev/sres/cloud-providers"
     dynamicTitles       = true
     searchMenu          = true
     shareMenu           = true

@@ -1,0 +1,45 @@
++++
+title = "Azure - conceitos de cloud"
+description = "Todo mundo já sabe mas..."
+author = "Marcelo Andrade"
+date = "2020-11-16"
+tags = ["computing","associate"]
+categories = ["computing","associate"]
+[[images]]
+  src = "img/main/ec2.png"
+  alt = "Calico cat clawing the door"
+  stretch = ""
++++
+
+AZ900, como de praxe, cobra alguns conceitos básicos relacionados ao uso de Cloud não necessariamente relacionados à sua tecnologia própria. São meio que óbvios, mas vale como referência para estudo.
+
+Pessoalmente nunca gostei da parte da área de tecnologia que gosta de criar nomes novos para coisas que já existem, mas faz parte se acostumar com essa realidade.
+
+## Public clouds
+
+"Nuvem pública" é o nome que o mercado optou para designar os provedores de serviços de nuvem. O que fazem "provedores de serviços de nuvem"? Vendem seus recursos de computação e outros serviços relacionados pela Internet. usando os mais variados modelos de implantação - SaaS, PaaS, IaaS e qualquer outro XaaS que inventarem depois. E o mais importante: ela é **pública** porque está disponível para praticamente qualquer um (que tenha dinheiro) e acessível pela Internet.
+
+
+**Dica de exame**:
+A própria documentação Azure indica que "você acessa estes serviços e gerencia sua conta usando um navegador Internet". Embora não seja uma verdade única, afinal você pode gerenciar sua conta usando uma das várias alternativas de linha de comando para Windows e Linux, bem como via SDKs, tome cuidado para não ser preciosista e marcar essa frase como falsa apenas porque existem outras maneiras.
+
+## Private clouds
+
+As "nuvens privadas" são recursos computacionais e serviços de nuvem mantidos por uma única empresa~e que se limita a atender aquela empresa. A nuvem privada pode estar em um datacenter próprio da empresa, **mas não é um requisito**: você pode contratar uma nuvem privada que ficará fisicamente hospedada por terceiros. 
+
+A distinção importante, em termos de exame, é que o objetivo da nuvem privada é ser usada por uma única organização, em uma rede privada exclusiva.
+
+## Hybrid clouds
+
+"Nuvens híbridas" é um conceito desnecessário que descreve "nuvens" conectadas por recursos tecnológicos que viabilizam, por exemplo, replicação de dados, redundância em caso de falhas e coisas do tipo. O objetivo deste conceito é identificar que existem tecnologias específicas para tornar possível você conectar sua infraestrutura com a nuvem, ainda que não tenha interesse em fazer uso generalizado da nuvem pública.
+
+## Conclusão
+
+Não se deve levar as definições encontradas nos sites a ferro e fogo; os termos não são cientificamente definidos . O importante é assimilas as ideias descritas pelas documentações dos provedores e evitar pensar demais em possíveis furos nas questões assertivas.
+
+Por exemplo: contratar uma empresa para montar uma infraestrutura 'cloud-like' no seu datacenter próprio acessado via internet por meio de VPN deixa de ser classificado como nuvem privada pela conectividade ser realizada pela Internet? Claro que não. E a Govcloud da AWS ou a Azure Government Cloud Computing, são nuvens públicas ou privadas? A resposta é: ninguém se importa.
+
+Uma boa lição de pessoa acostumada a concursos: a regra é que erram as questões não apenas aqueles que nada sabem, mas também aqueles que sabem demais.
+
+
+

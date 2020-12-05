@@ -6,116 +6,31 @@
     <description>Recent content in Categories on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt</language>
-    <lastBuildDate>Fri, 30 Oct 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://devsres.com/marcelo/categories/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 04 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://devsres.com/marcelo/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>node-exporter</title>
-      <link>https://devsres.com/marcelo/categories/node-exporter/</link>
-      <pubDate>Fri, 30 Oct 2020 00:00:00 +0000</pubDate>
+      <title>associate</title>
+      <link>https://devsres.com/marcelo/categories/associate/</link>
+      <pubDate>Fri, 04 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://devsres.com/marcelo/categories/node-exporter/</guid>
+      <guid>https://devsres.com/marcelo/categories/associate/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>prometheus</title>
-      <link>https://devsres.com/marcelo/categories/prometheus/</link>
-      <pubDate>Fri, 30 Oct 2020 00:00:00 +0000</pubDate>
+      <title>az900</title>
+      <link>https://devsres.com/marcelo/categories/az900/</link>
+      <pubDate>Fri, 04 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://devsres.com/marcelo/categories/prometheus/</guid>
+      <guid>https://devsres.com/marcelo/categories/az900/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>tls</title>
-      <link>https://devsres.com/marcelo/categories/tls/</link>
-      <pubDate>Fri, 30 Oct 2020 00:00:00 +0000</pubDate>
+      <title>computing</title>
+      <link>https://devsres.com/marcelo/categories/computing/</link>
+      <pubDate>Fri, 04 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://devsres.com/marcelo/categories/tls/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>kubernetes</title>
-      <link>https://devsres.com/marcelo/categories/kubernetes/</link>
-      <pubDate>Wed, 28 Oct 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://devsres.com/marcelo/categories/kubernetes/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>docker</title>
-      <link>https://devsres.com/marcelo/categories/docker/</link>
-      <pubDate>Fri, 23 Oct 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://devsres.com/marcelo/categories/docker/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>linux</title>
-      <link>https://devsres.com/marcelo/categories/linux/</link>
-      <pubDate>Fri, 23 Oct 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://devsres.com/marcelo/categories/linux/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>calico</title>
-      <link>https://devsres.com/marcelo/categories/calico/</link>
-      <pubDate>Tue, 06 Oct 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://devsres.com/marcelo/categories/calico/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>intermediário</title>
-      <link>https://devsres.com/marcelo/categories/intermedi%C3%A1rio/</link>
-      <pubDate>Tue, 06 Oct 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://devsres.com/marcelo/categories/intermedi%C3%A1rio/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>terraform</title>
-      <link>https://devsres.com/marcelo/categories/terraform/</link>
-      <pubDate>Tue, 06 Oct 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://devsres.com/marcelo/categories/terraform/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>vmware</title>
-      <link>https://devsres.com/marcelo/categories/vmware/</link>
-      <pubDate>Tue, 06 Oct 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://devsres.com/marcelo/categories/vmware/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>containers</title>
-      <link>https://devsres.com/marcelo/categories/containers/</link>
-      <pubDate>Mon, 21 Sep 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://devsres.com/marcelo/categories/containers/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Iniciando</title>
-      <link>https://devsres.com/marcelo/categories/iniciando/</link>
-      <pubDate>Mon, 21 Sep 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://devsres.com/marcelo/categories/iniciando/</guid>
+      <guid>https://devsres.com/marcelo/categories/computing/</guid>
       <description></description>
     </item>
     

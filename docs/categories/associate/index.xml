@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>associate on </title>
+    <link>https://devsres.com/marcelo/categories/associate/</link>
+    <description>Recent content in associate on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt</language>
+    <lastBuildDate>Fri, 04 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://devsres.com/marcelo/categories/associate/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AWS e Azure: Armazenamento de objetos</title>
+      <link>https://devsres.com/marcelo/blog/aws-azure-comparison-s3/</link>
+      <pubDate>Fri, 04 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://devsres.com/marcelo/blog/aws-azure-comparison-s3/</guid>
+      <description>Se você conhece bastante de um Cloud Provider, acredito que o primeiro passo para estudar um segundo seria entender o básico da equivalência entre eles, meio que um &amp;ldquo;dicionário&amp;rdquo; para traduzir entre dois conjuntos distintos de vocabulários.
+Sempre existirão diferenças conceituais estruturantes, em especial nos Cloud Providers que vieram depois e puderam arranjar, de maneira mais elegante, a apresentação dos seus serviços.
+No fim do dia, uma máquina virtual é uma máquina virtual.</description>
+    </item>
+    
+  </channel>
+</rss>
