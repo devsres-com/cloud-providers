@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title></title>
-    <link>https://devsres.com/marcelo/</link>
+    <link>https://devsres.com/cloud-providers/</link>
     <description>Recent content on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt</language>
-    <lastBuildDate>Fri, 04 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://devsres.com/marcelo/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 04 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://devsres.com/cloud-providers/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>AWS e Azure: Armazenamento de objetos</title>
-      <link>https://devsres.com/marcelo/blog/aws-azure-comparison-s3/</link>
+      <link>https://devsres.com/cloud-providers/blog/aws-azure-comparison-s3/</link>
       <pubDate>Fri, 04 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://devsres.com/marcelo/blog/aws-azure-comparison-s3/</guid>
+      <guid>https://devsres.com/cloud-providers/blog/aws-azure-comparison-s3/</guid>
       <description>Se você conhece bastante de um Cloud Provider, acredito que o primeiro passo para estudar um segundo seria entender o básico da equivalência entre eles, meio que um &amp;ldquo;dicionário&amp;rdquo; para traduzir entre dois conjuntos distintos de vocabulários.
 Sempre existirão diferenças conceituais estruturantes, em especial nos Cloud Providers que vieram depois e puderam arranjar, de maneira mais elegante, a apresentação dos seus serviços.
 No fim do dia, uma máquina virtual é uma máquina virtual.</description>
@@ -20,20 +20,20 @@ No fim do dia, uma máquina virtual é uma máquina virtual.</description>
     
     <item>
       <title>Sobre</title>
-      <link>https://devsres.com/marcelo/about/</link>
+      <link>https://devsres.com/cloud-providers/about/</link>
       <pubDate>Mon, 14 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://devsres.com/marcelo/about/</guid>
+      <guid>https://devsres.com/cloud-providers/about/</guid>
       <description>O fundador da DevSREs Network Initiative, Marcelo Andrade, é entusiasta do universo Linux e software livre desde a primeira instalação do saudoso Conectiva Parolin em 1997.
 Ao longo dos anos, transitou profissionalmente entre os mais diversos nomes comumente atribuídos aos profissionais de TI que não trabalham diretamente com desenvolvimento de software: sysop, sysadmin, administrador de redes, analista de redes, analista de infraestrutura, analista de suporte, engenheiro de soluções&amp;hellip; Até se auto instituir o título de Site Reliability Engineer, ou engenheiro de confiabilidade (de sites?</description>
     </item>
     
     <item>
       <title>Contact</title>
-      <link>https://devsres.com/marcelo/contact/</link>
+      <link>https://devsres.com/cloud-providers/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://devsres.com/marcelo/contact/</guid>
+      <guid>https://devsres.com/cloud-providers/contact/</guid>
       <description></description>
     </item>
     
